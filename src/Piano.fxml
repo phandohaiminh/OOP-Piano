@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="239.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox prefHeight="182.0" prefWidth="354.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="222.0">
+                     <children>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="C" />
+                        <Button fx:id="btnF" alignment="BOTTOM_CENTER" layoutX="96.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="F" />
+                        <Button fx:id="btnS" alignment="BOTTOM_CENTER" layoutX="32.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="S" />
+                        <Button fx:id="btnD" alignment="BOTTOM_CENTER" layoutX="64.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="D" />
+                        <Button fx:id="btnE" alignment="BOTTOM_CENTER" layoutX="52.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="18.0" style="-fx-background-color: black;" text="E" textFill="WHITE" />
+                        <Button fx:id="btnG" alignment="BOTTOM_CENTER" layoutX="128.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="G" />
+                        <Button fx:id="btnA" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="A" />
+                        <Button fx:id="btnH" alignment="BOTTOM_CENTER" layoutX="160.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="H" />
+                        <Button fx:id="btnJ" alignment="BOTTOM_CENTER" layoutX="192.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="J" />
+                        <Button fx:id="btnT" alignment="BOTTOM_CENTER" layoutX="116.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="18.0" style="-fx-background-color: black;" text="T" textFill="WHITE" />
+                        <Button fx:id="btnY" alignment="BOTTOM_CENTER" layoutX="148.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="18.0" style="-fx-background-color: black;" text="Y" textFill="WHITE" />
+                        <Button fx:id="btnU" alignment="BOTTOM_CENTER" layoutX="180.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="25.0" style="-fx-background-color: black;" text="U" textFill="WHITE" />
+                        <Button fx:id="btnW" alignment="BOTTOM_CENTER" layoutX="15.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="29.0" style="-fx-background-color: black;" text="W" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <VBox prefHeight="20.0" prefWidth="354.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Options">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#showHelpDialog" text="Help" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Octave:" />
+                  <Label fx:id="octaveLabel" text="5" />
+                  <Button mnemonicParsing="false" onAction="#octaveUpPressed" text="+" />
+                  <Button mnemonicParsing="false" onAction="#octaveDownPressed" text="-" />
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Volume:" />
+                  <Label fx:id="volumeLabel" text="50" />
+                  <Button mnemonicParsing="false" onAction="#volumeUpPressed" text="+" />
+                  <Button mnemonicParsing="false" onAction="#volumeDownPressed" text="-" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
